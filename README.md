@@ -19,6 +19,11 @@ Don't understand something? DM me @madamelic and I'll help you, then add here as
   - When redirected to the service's OAuth callback, the page should display a JSON object with an access token and potentially a refresh token
     - Store these in a safe place and do not check them into source control
     - I use [@qnzl/lockbox](https://gitlab.com/qnzl/lockbox) but the best solution is Hashicorp's [Vault](https://www.vaultproject.io/)
+- If the service uses API keys:
+  - Create API keys on the service
+  - Store API keys in a safe place
+- Change `SERVICE_MAP` url in your `archiver-queue` script to point to your service
+- Change `BLOCK_STORAGE_PATH` to point to where you want archives created
 - Create a cronjob to run [archiver-queue](https://github.com/qnzl-archivist/archiver-queue) as often as you want to do backups
   - Check out https://cron.guru to write the approriate cron statement
   - Make sure to `source` the file you declared your environment variables in
