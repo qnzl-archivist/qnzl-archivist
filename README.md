@@ -24,6 +24,6 @@ Don't understand something? DM me @madamelic and I'll help you, then add here as
   - Store API keys in a safe place
 - Change `SERVICE_MAP` url in your `archiver-queue` script to point to your service
 - Change `BLOCK_STORAGE_PATH` to point to where you want archives created
-- Create a cronjob to run [archiver-queue](https://github.com/qnzl-archivist/archiver-queue) as often as you want to do backups
+- Create a cronjob to run [archiver-queue](https://github.com/qnzl-archivist/archiver-queue)'s `start-dumb.js`' as often as you want to do backups
   - Check out https://cron.guru to write the approriate cron statement
   - Make sure to `source` the file you declared your environment variables in
